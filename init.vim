@@ -18,16 +18,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jceb/vim-orgmode'
+Plug 'https://github.com/vim-scripts/utl.vim'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
 let mapleader = " "
+let maplocalleader = "//"
 nnoremap <C-t> :NERDTreeToggle<CR>
 
+let g:onedark_termcolors=256
 syntax on
 colorscheme onedark
-let g:airline_theme='onedark'
 
 
 " Highlight when yank
@@ -68,7 +70,15 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap < <><left>
 
-
+" CocVim list extension:
+"   - coc-prettier
+"   - coc-html
+"   - coc-eslint
+"   - coc-yaml
+"   - coc-tsserver
+"   - coc-json
+"   - coc-docker
+"   - coc-css
 " Cocvim setting
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
