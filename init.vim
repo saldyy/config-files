@@ -20,12 +20,16 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/vim-scripts/utl.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'https://github.com/tpope/vim-fugitive'
 
 call plug#end()
 
 let mapleader = " "
 let maplocalleader = "//"
+" Nerd tree config
+let NERDTreeShowHidden = 1
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
 
 let g:onedark_termcolors=256
 syntax on
@@ -44,10 +48,6 @@ map	<C-j> <C-w>j
 map	<C-k> <C-w>k
 map	<C-l> <C-w>l
 
-" Disable h l 
-map h <Nop>
-map l <Nop>
-
 "Mapping ripgrep 
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
@@ -62,13 +62,6 @@ nnoremap J mzJ`z
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
 
-" Auto close bracket
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap < <><left>
 
 " CocVim list extension:
 "   - coc-prettier
