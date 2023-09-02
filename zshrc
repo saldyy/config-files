@@ -73,6 +73,7 @@ ZSH_THEME="dracula"
 plugins=(
 	git
 	aws
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -113,3 +114,7 @@ complete -o nospace -C /usr/bin/aws-sso aws-sso.
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
+
+alias vim=nvim
+export VISUAL=$(which nvim)
+export EDITOR="$VISUAL"
