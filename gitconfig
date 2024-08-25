@@ -1,0 +1,13 @@
+[init]
+	defaultBranch = master
+[user]
+	email = png9981@gmail.com
+	name = Phillip Nguyen
+
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+
+[pull]
+	rebase = true
+[alias]
+	adog = log --all --decorate --oneline --graph
