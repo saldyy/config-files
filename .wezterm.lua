@@ -92,7 +92,7 @@ config.keys = {
     action = act.TogglePaneZoomState,
   },
 
-  -- CTRL+SHIFT+Space, followed by 'r' will put us in resize-pane
+  -- Leader, followed by 'r' will put us in resize-pane
   -- mode until we cancel that mode.
   {
     key = 'r',
@@ -103,7 +103,7 @@ config.keys = {
     },
   },
 
-  -- CTRL+SHIFT+Space, followed by 'a' will put us in activate-pane
+  -- Leader, followed by 'a' will put us in activate-pane
   -- mode until we press some other key or until 1 second (1000ms)
   -- of time elapses
   {
@@ -113,6 +113,11 @@ config.keys = {
       name = 'activate_pane',
       timeout_milliseconds = 1000,
     },
+  },
+  {
+    key = 'q',
+    mods = 'LEADER',
+    action = act.PaneSelect { alphabet = '0123456789'},
   },
 }
 
