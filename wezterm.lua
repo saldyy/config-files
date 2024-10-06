@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 config.font =
-    wezterm.font('Noto Color Emoji', { italic = false })
+    wezterm.font('Noto Color Symbol', { italic = false })
 
 -- Changing the color scheme:
 config.color_scheme = 'Dracula (Official)'
