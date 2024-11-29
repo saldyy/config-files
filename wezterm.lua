@@ -6,13 +6,12 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 config.font =
-    wezterm.font('Noto Color Symbol', { italic = false })
+    wezterm.font('JetBrains Mono', { italic = false })
 
 -- Changing the color scheme:
 config.color_scheme = 'Dracula (Official)'
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
-config.window_decorations = "RESIZE"
 
 -- Show which key table is active in the status area
 wezterm.on('update-right-status', function(window, pane)
@@ -22,9 +21,6 @@ wezterm.on('update-right-status', function(window, pane)
   end
   window:set_right_status(name or '')
 end)
-
-config.keys = {
-}
 
 config.key_tables = {
   -- Defines the keys that are active in our resize-pane mode.
@@ -72,11 +68,6 @@ config.key_tables = {
 config.leader = { key = 'g', mods = 'CTRL', timeout_milliseconds = 1000 }
 config.keys = {
   {
-    key = 'r',
-    mods = 'LEADER',
-    action = act.ReloadConfiguration,
-  },
-  {
     key = 'h',
     mods = 'LEADER',
     action = act.SplitHorizontal { domain = "CurrentPaneDomain" },
@@ -118,6 +109,11 @@ config.keys = {
     key = 'q',
     mods = 'LEADER',
     action = act.PaneSelect { alphabet = '0123456789'},
+  },
+  {
+    key = ' ',
+    mods = 'LEADER',
+    action = act.RotatePanes 'Clockwise',
   },
 }
 
