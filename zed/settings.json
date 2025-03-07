@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
+    },
+    "version": "2"
+  },
   "tab_bar": {
     "show": true
   },
@@ -17,7 +24,7 @@
   "buffer_font_family": "Helvetica",
   "theme": {
     "mode": "system",
-    "light": "One Dark",
+    "light": "One Dark Pro",
     "dark": "One Dark"
   },
   "format_on_save": "on",
@@ -46,7 +53,18 @@
         }
       }
     },
-    "ts_ls": {}
+    "ts_ls": {},
+    "pug": {
+      "command": "pug-language-server",
+      "args": [
+        "--stdio"
+      ],
+      "settings": {},
+      "filetypes": [
+        "pug",
+        "jade"
+      ]
+    }
   },
   "git": {
     "git_gutter": "tracked_files",
