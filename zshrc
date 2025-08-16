@@ -74,6 +74,7 @@ plugins=(
 	git
 	aws
   zsh-autosuggestions
+  zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,6 +109,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 complete -o nospace -C /usr/bin/aws-sso aws-sso.
 
@@ -118,3 +120,8 @@ complete -o nospace -C /usr/bin/terraform terraform
 alias vim=nvim
 export VISUAL=$(which nvim)
 export EDITOR="$VISUAL"
+
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go 
+export GOROOT=/usr/local/go 
+export GOBIN=$GOPATH/bin 
