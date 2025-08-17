@@ -125,3 +125,7 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go 
 export GOROOT=/usr/local/go 
 export GOBIN=$GOPATH/bin 
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
