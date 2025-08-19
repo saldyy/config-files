@@ -242,6 +242,10 @@ exec swaymsg gaps outer set 20px
 gaps inner 10
 gaps outer 10
 
+client.unfocused          #282a36 #282a36  #6272a4 #6272a4  #282a36 
+client.focused	          #303446 #303446  #6272a4 #6272a4  #303446
+client.focused_inactive	  #44475a #44475a  #6272a4 #6272a4  #44475a 
+
 # Multi monitor support, might need to update this based on each system
 workspace 1 output HDMI-A-2
 workspace 2 output HDMI-A-2
