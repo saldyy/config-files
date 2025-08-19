@@ -96,6 +96,7 @@ output * bg /home/saldyy/Pictures/wallpaper.jpeg fill
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Screenshot
+    bindsym Control+Shift+p exec grim -g "$(slurp)" - | wl-copy
 # Moving around:
 #
     # Move your focus around
