@@ -26,10 +26,11 @@ window#waybar {
 }
 
 window#waybar.empty {
-    background-color: transparent;
+  background-color: transparent;
+  border: none;
 }
 
-.modules-left, .modules-center, .modules-right {
+.modules-left, .modules-right {
   background: @bg;
   border: 1px solid @surface;
   border-radius: 16px;
