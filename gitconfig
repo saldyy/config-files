@@ -8,3 +8,5 @@
 	rebase = true
 [alias]
 	adog = log --all --decorate --oneline --graph
+[push]
+	autoSetupRemote = true
